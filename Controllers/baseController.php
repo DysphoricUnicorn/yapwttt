@@ -20,7 +20,7 @@
 		final function renderView (string $name, array $props) {
 			$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../Views');
 			$twig = new \Twig\Environment($loader, ['cache' => __DIR__ . '/../Storage/ViewCache']);
-			return $twig->render($name . '.twig.html', $props);
+			return $twig->render($name . '.html.twig', $props);
 		}
 
 	}
