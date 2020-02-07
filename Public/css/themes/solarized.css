@@ -1,0 +1,27 @@
+/*
+    Naming convention is as follows:
+    $which_main_color_plus: The color used most commonly for $which
+    $which_main_color: A less "extreme" (light/dark) version of the above
+    $which_secondary_plus_color: The color used least commonly for $which
+    $which_secondary_plus_color: see above
+
+    --accent-$which-color: Pretty self explanatory imo.
+*/
+* {
+    --bg_main_plus_color: #1c1c1c;
+    --bg_main_color: #262626;
+    --bg_secondary_color: #e4e4e4;
+    --bg_secondary_plus_color: #ffffd7;
+    --content_secondary_plus_color: #585858;
+    --content_secondary_color: #626262;
+    --content_main_color: #808080;
+    --content_main_plus_color: #8a8a8a;
+
+    --accent_good_color: #5f8700;
+    --accent_warn_color: #af8700;
+    --accent_bad_color: #d70000;
+    --accent_notify_color: #af005f;
+    --accent_link_color: #0087ff;
+    --accent_link_visited_color: #5f5faf;
+    --accent_generic_color: #00afaf;
+}

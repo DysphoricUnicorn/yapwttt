@@ -1,0 +1,28 @@
+header {
+    min-height: 5%;
+}
+
+#pageContent {
+    min-height: 85%;
+}
+
+footer {
+    min-height: 5%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.grow, footer, header {
+    flex-grow: 1;
+}
+
+body {
+    background-color: var(--bg_main_plus_color);
+    color: var(--content_main_plus_color);
+}
