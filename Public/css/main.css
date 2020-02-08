@@ -1,21 +1,17 @@
+html, body, #pageContent, header, footer, #pageHeading {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+footer, header {
+    min-height: 60px;
+    color: var(--content_main_color);
+    background-color: var(--bg_main_color);
+}
+
 header {
-    min-height: 5%;
-}
-
-#pageContent {
-    min-height: 85%;
-}
-
-footer {
-    min-height: 5%;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.d-flex {
-    display: flex;
+    top: 0;
 }
 
 .grow, footer, header {
@@ -25,4 +21,49 @@ footer {
 body {
     background-color: var(--bg_main_plus_color);
     color: var(--content_main_plus_color);
+}
+
+#pageHeading {
+    font-size: 35px;
+}
+
+#pageContent {
+    min-height: 85%;
+}
+
+.h-100 {
+    width: 100%;
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text-good {
+    color: var(--accent_good_color);
+}
+
+.text-warning {
+    color: var(--accent_warn_color);
+}
+
+.text-bad {
+    color: var(--accent_bad_color);
+}
+
+.text-notify {
+    color: var(--accent_notify_color);
+}
+
+.text-generic-accent {
+    color: var(--accent_generic_color);
+}
+
+a:link {
+    color: var(--accent_link_color);
+}
+
+a:link:visited {
+    color: var(--accent_link_visited_color);
 }
