@@ -5,17 +5,21 @@
 
 	use Controllers\loginController;
 
+	prepareSession();
 	setTheme();
+	doRouting();
 
-	$route = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL);
-
-	switch ($route) {
-		default:
-			$lc = new loginController();
-			echo($lc->showLoginView());
-			break;
-	}
-
+	/**
+	 * Sets the theme to load for a user.
+	 * Priority is as follows:
+	 * 1. GET params
+	 * 2. Session vars
+	 * 3. Cookies
+	 * Get params are used to set the theme, which is why they will always have the highest priority.
+	 * Session vars (if set) should theoretically always be equal to cookie vars but in edge cases they might not.
+	 * We assume that session vars will be set more recently (unless users manually change their cookies, which is not
+	 * intended functionality) which is why they have priority.
+	 */
 	function setTheme () {
 		if (isset($_GET['theme'])) {
 			$theme = $_GET['theme'];
@@ -43,5 +47,19 @@
 	function prepareSession () {
 		if (session_status() === PHP_SESSION_NONE) {
 			session_start();
+		}
+	}
+
+	/**
+	 * Gets the route a user requested and load the correct controller
+	 */
+	function doRouting () {
+		$route = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL);
+
+		switch ($route) {
+			default:
+				$lc = new loginController();
+				echo($lc->showLoginView());
+				break;
 		}
 	}
