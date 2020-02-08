@@ -67,3 +67,17 @@ a:link {
 a:link:visited {
     color: var(--accent_link_visited_color);
 }
+
+input, button {
+    border-radius: 5px;
+}
+
+.button-primary, input {
+    color: var(--content_main_color);
+    background-color: var(--bg_main_color);
+    border-color: var(--accent_generic_color);
+}
+
+*:focus, *:active {
+    border-color: var(--accent_notify_color);
+}
