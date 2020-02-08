@@ -1,1 +1,23 @@
-{ extends "../layouts/main.twig.html" }
+{% extends "layouts/main.html.twig" %}
+{% block title %}This page requires authentication{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="/css/login.css"/>
+{% endblock %}
+{% block headerText %}This page <a class="text-notify">requires authentication</a>{% endblock %}
+{% block content %}
+    <div id="loginFormContainer">
+        <form>
+            <br/>
+            <label class="input-label" for="userNameInput">Username:</label>
+            <br/>
+            <input id="userNameInput" autocomplete="username"/>
+            <br/>
+            <label class="input-label" for="passwordInput">Password:</label>
+            <br/>
+            <input id="passwordInput" autocomplete="current-password"/>
+            <br/>
+            <br/>
+            <button class="button-primary" type="submit">Login</button>
+        </form>
+    </div>
+{% endblock %}

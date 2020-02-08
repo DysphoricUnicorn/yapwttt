@@ -10,7 +10,17 @@
 </head>
 <body class="h-100">
 <header>
-    <h1 id="pageHeading">{{ block("title") }} - Yapwttt</h1>
+    <h1 id="pageHeading">
+        {% block headerText %}
+            <a class="text-generic-accent">Yet </a>
+            <a class="text-notify">Another </a>
+            <a class="text-good">Personal </a>
+            <a class="text-warning">Work </a>
+            <a class="text-bad">Time </a>
+            <a class="text-generic-accent">Tracking </a>
+            <a class="text-notify">Thingie</a>
+        {% endblock %} - Yapwttt
+    </h1>
 </header>
 <section content id="pageContent">
     {% block content %}
