@@ -1,0 +1,3 @@
+<?php
+define('username', 'YOUR_USERNAME');
+define('passHash', 'A_HASHED_PASSWORD_BCRYPT_IS_RECOMMENDED_FOR_THIS');
