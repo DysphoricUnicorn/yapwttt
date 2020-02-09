@@ -6,15 +6,15 @@
 {% block headerText %}This page <a class="text-notify">requires authentication</a>{% endblock %}
 {% block content %}
     <div id="loginFormContainer">
-        <form>
+        <form action="/?page=tryLogin" method="post">
             <br/>
             <label class="input-label" for="userNameInput">Username:</label>
             <br/>
-            <input id="userNameInput" autocomplete="username"/>
+            <input name="username" id="userNameInput" autocomplete="username"/>
             <br/>
             <label class="input-label" for="passwordInput">Password:</label>
             <br/>
-            <input id="passwordInput" autocomplete="current-password"/>
+            <input name="password" id="passwordInput" autocomplete="current-password"/>
             <br/>
             <br/>
             <button class="button-primary" type="submit">Login</button>

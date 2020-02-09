@@ -57,9 +57,35 @@
 		$route = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL);
 
 		switch ($route) {
+			case('tryLogin'):
+				if (tryLogin($_POST['username'], $_POST['password'])) {
+					echo "success";
+				} else {
+					echo "failure";
+				}
+				break;
 			default:
 				$lc = new loginController();
 				echo($lc->showLoginView());
 				break;
 		}
+	}
+
+	/**
+	 * Tries to log in a user with their username and password.
+	 * Returns true on success and false otherwise.
+	 * @param string $username
+	 * @param string $password
+	 * @return bool
+	 */
+	function tryLogin (string $username, string $password) {
+		if (constant('username') === $username && password_verify($password, constant('passHash'))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function tryAuth () {
+
 	}
